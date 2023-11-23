@@ -3,17 +3,23 @@
 </div>
          <h1 align="center">    Hi there 👋
            </h1>
-<div id="badges"   align="center">
-  <a href="https://www.linkedin.com/in/srushti-aher-869a5320a/" target="_blank">
-        <img src="https://img.shields.io/badge/SrushtiAher-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-    </a>
-<a href="mailto:SrushtiAher1212@gmail.com" target="_blank" style="border: 3px solid blue; border-radius: 5px; padding: 5px; display: inline-block; text-decoration: none;">
-    <img src="https://img.shields.io/badge/-SrushtiAher1212%40gmail.com-white?style=for-the-badge&logo=Gmail&logoColor=red" alt="Gmail Badge" style="display: block;">
+<div id="badges" align="center">
+<a href="https://www.linkedin.com/in/srushti-aher-869a5320a/" target="_blank" class="circular-badge">
+    <img src="https://img.shields.io/badge/-SrushtiAher-blue?style=flat&logo=Linkedin&logoColor=white" alt="LinkedIn Badge"/>
 </a>
- <div id="badges"   align="center">
-   <img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=blue&label=PROFILE+VIEWS&reset=1"/>
+
+<a href="mailto:Srushtiaher1212@gmail.com" target="_blank" class="circular-badge">
+    <img src="https://img.shields.io/badge/-SrushtiAher1212%40gmail.com-red?style=flat&logo=Gmail&logoColor=white" alt="Gmail Badge"/>
+</a>
+
 </div>
+
+<div id="github-badge" align="center" class="circular-badge">
+    <img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=blue&label=PROFILE+VIEWS&reset=1"/>
 </div>
+
+
+
 ### :woman_technologist: About Me :
 <p>I am a Full Stack Developer | Content Creator | Web developer</p>
 
