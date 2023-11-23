@@ -1,25 +1,32 @@
-
-
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/hpXdHPfFI5wTABdDx9/giphy.gif" width="350"/>
 </div>
          <h1 align="center">    Hi there 👋
            </h1>
 <div id="badges"   align="center">
-  <a href="https://www.linkedin.com/in/srushti-aher-869a5320a/">
-  <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-     </a>
+  <a href="https://www.linkedin.com/in/srushti-aher-869a5320a/" target="_blank">
+        <img src="https://img.shields.io/badge/SrushtiAher-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+    </a>
+<a href="mailto:SrushtiAher1212@gmail.com" target="_blank" style="border: 3px solid blue; border-radius: 5px; padding: 5px; display: inline-block; text-decoration: none;">
+    <img src="https://img.shields.io/badge/-SrushtiAher1212%40gmail.com-white?style=for-the-badge&logo=Gmail&logoColor=red" alt="Gmail Badge" style="display: block;">
+</a>
+ <div id="badges"   align="center">
+   <img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=blue&label=PROFILE+VIEWS&reset=1"/>
+</div>
 </div>
 ### :woman_technologist: About Me :
 <p>I am a Full Stack Developer | Content Creator | Web developer</p>
 
-- :telescope: I’m working as a Software Engineer and contributing to frontend and backend for building web applications.
+- :telescope: I’m a student of Computer Engineering, a coder, and designer contributing to frontend and backend for building web applications.
 
 - :seedling: Exploring Technical Content Writing.
 
 - :zap: In my free time, I solve problems on GeeksforGeeks and read tech articles.
 
-- :mailbox:How to reach me: - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-SrushtiAher-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/srushti-aher-869a5320a/)
+- :mailbox:How to reach me: - [![Linkedin Badge](https://img.shields.io/badge/-SrushtiAher-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/srushti-aher-869a5320a/)<a href="mailto:Srushtiaher1212@gmail.com">
+            <img src="https://img.shields.io/badge/-SrushtiAher1212@gmail.com-red?style=flat&logo=Gmail&logoColor=white" alt="Gmail Badge">
+        </a> 
+
 <!--
 **SrushtiAher/SrushtiAher** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
