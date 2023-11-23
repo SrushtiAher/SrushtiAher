@@ -1,7 +1,12 @@
-### Hi there 👋
+
 
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/hpXdHPfFI5wTABdDx9/giphy.gif" width="100"/>
+  <img src="https://media.giphy.com/media/hpXdHPfFI5wTABdDx9/giphy.gif" width="350"/>
+</div>
+### Hi there 👋
+<div id="badges">
+  <a href="www.linkedin.com/in/srushti-aher-869a5320a">
+  <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
 </div>
 
 <!--
