@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decentralized Cloud Storage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            display: flex;
+        }
+        /* Left Panel */
+        #left-panel {
+            width: 20%;
+            height: 100vh;
+            background-color: rgba(105, 211, 235, 0.5);
+            border-right: 2px solid black;
+        }
+
+            #left-panel h2 {
+                background-color: black;
+                color: white;
+                margin: 0;
+                padding: 10px;
+                text-align: center;
+            }
+
+            #left-panel ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                #left-panel ul li a {
+                    display: block;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: black;
+                    border: 1px solid #ccc;
+                    margin: 5px;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+        /* Right Panel */
+        #right-panel {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cloudacademy.com/wp-content/uploads/2017/01/2022-10-14-Blog-Feature-What-is-Cloud-Computing-1-1200x620.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        /* Header */
+        #header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+        /* Buttons */
+        button, a button {
+            background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(131,58,180,1) 100%);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+        }
+        /* Center Content */
+        h1 {
+            margin-top: -150px;
+        }
+
+        #fileInputDiv {
+            margin-left: 120px;
+            margin-top: -10px;
+            margin-bottom: 50px;
+        }
+
+        #uploadButtonDiv {
+            margin-left: 150px;
+            margin-top: 100px;
+            margin-bottom: 0px;
+        }
+        /* File List Box */
+        #fileListDiv {
+            position: absolute;
+            bottom: 20px;
+            left: 15%;
+            right: 15%;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-family: 'Ubuntu Mono', monospace;
+            font-size: 16px;
+        }
+        /* Delete Button */
+        .deleteButton {
+            font-size: 10px;
+            padding: 3px 6px;
+            margin-left: auto;
+            display: inline-block;
+        }
+        /* File List */
+        #fileList li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* Subscription Content */
+        #subscription-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+            #subscription-content h3 {
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            #subscription-content label {
+                color: white;
+                font-size: 18px;
+                margin-left: 10px;
+            }
+
+            #subscription-content input[type="radio"] {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+        /* Logs Content */
+        #logs-content {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+            #logs-content h3 {
+                color: white;
+                margin-bottom: 20px;
+            }
+
+        #activityLogs {
+            color: white;
+            font-size: 18px;
+            margin-left: 10px;
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="left-panel">
+        <h2 id="username">Welcome, </h2>
+        <ul>
+            <li><a href="#" onclick="showHome()">Home</a></li>
+            <li><a href="#" onclick="showSettings()">Settings</a></li>
+            <li><a href="#" onclick="showSubscription()">Subscription</a></li>
+           <li><a href="#" onclick="showLogs()">Logs</a></li> <!-- Add this line -->
+        </ul>
+    </div>
+    <div id="right-panel">
+        <div id="subscription-content" style="display:none;">
+            <h3>Select Storage Plan:</h3>
+            <input type="radio" id="free" name="plan" value="500">
+            <label for="free">500MB (Free)</label><br>
+
+            <input type="radio" id="basic" name="plan" value="1000">
+            <label for="basic">1GB (₹200/month)</label><br>
+
+            <input type="radio" id="premium" name="plan" value="5000">
+            <label for="premium">5GB (₹350/month)</label>
+        </div>
+<div id="logs-content" style="display:none;">
+        <!-- Logs will be displayed here -->
+    </div>
+
+        <div id="logs-content">
+            <h3>Activity Logs:</h3>
+            <ul id="activityLogs"></ul>
+        </div>
+
+        <div id="header">
+            <a href="#"><button id="dashboardButton" onclick="showHome()">Go to Dashboard</button></a>
+            <button type="button" onclick="toggleFileList()">List Files</button>
+            <button id="logoutButton" onclick="logout()">Logout</button>
+        </div>
+
+        <div id="main-content">
+            <h1>Decentralized Cloud Storage</h1>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div id="fileInputDiv">
+                    <input type="file" id="fileInput" name="file">
+                </div>
+                <div id="uploadButtonDiv">
+                    <button type="button" onclick="uploadFile()">Upload</button>
+                </div>
+            </form>
+        </div>
+        <div id="fileListDiv" style="display:none;">
+            <ul id="fileList">
+                <li>
+                    <a href="#">Download File</a>
+                    <button class="deleteButton" onclick="deleteFile('filename')">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="authorization.js"></script>
+    <style>
+        /* Background Image */
+        body {
+            background-image: url('https://cloudacademy.com/wp-content/uploads/2017/01/2022-10-14-Blog-Feature-What-is-Cloud-Computing-1-1200x620.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0b75e3;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  /* Center the input boxes and buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Decentralized Cloud Storage</h1>
+        <div id="loginDiv">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUserId" placeholder="User ID">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+
+        <div id="signupDiv">
+            <h2>Signup</h2>
+            <form id="signupForm">
+                <input type="text" id="signupUserId" placeholder="User ID">
+                <input type="password" id="signupPassword" placeholder="Password">
+                <input type="password" id="reconfirmPassword" placeholder="Reconfirm Password">
+                <button type="button" onclick="signup()">Signup</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
